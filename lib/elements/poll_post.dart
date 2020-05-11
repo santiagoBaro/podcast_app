@@ -9,11 +9,7 @@ class PollPost extends StatefulWidget {
 }
 
 class _PollPostState extends State<PollPost> {
-  void _onOptionSelected(bool newValue) => setState(() {
-        if (newValue) {
-          // PLACEHOLDER FUNCTION MENT JUST TO SHOW ACTIVE COLOR
-        }
-      });
+  List<bool> values = [false, false, false, false];
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +43,13 @@ class _PollPostState extends State<PollPost> {
             Row(
               children: <Widget>[
                 Checkbox(
-                  value: false,
-                  onChanged: _onOptionSelected,
+                  value: values[0],
+                  onChanged: (bool newValue) {
+                    setState(() {
+                      values = [false, false, false, false];
+                      values[0] = true;
+                    });
+                  },
                   activeColor: Colors.redAccent,
                 ),
                 Text(
@@ -63,8 +64,13 @@ class _PollPostState extends State<PollPost> {
             Row(
               children: <Widget>[
                 Checkbox(
-                  value: true,
-                  onChanged: _onOptionSelected,
+                  value: values[1],
+                  onChanged: (bool newValue) {
+                    setState(() {
+                      values = [false, false, false, false];
+                      values[1] = true;
+                    });
+                  },
                   activeColor: Colors.redAccent,
                 ),
                 Text(
@@ -79,8 +85,13 @@ class _PollPostState extends State<PollPost> {
             Row(
               children: <Widget>[
                 Checkbox(
-                  value: false,
-                  onChanged: _onOptionSelected,
+                  value: values[2],
+                  onChanged: (bool newValue) {
+                    setState(() {
+                      values = [false, false, false, false];
+                      values[2] = true;
+                    });
+                  },
                   activeColor: Colors.redAccent,
                 ),
                 Text(
@@ -95,8 +106,13 @@ class _PollPostState extends State<PollPost> {
             Row(
               children: <Widget>[
                 Checkbox(
-                  value: false,
-                  onChanged: _onOptionSelected,
+                  value: values[3],
+                  onChanged: (bool newValue) {
+                    setState(() {
+                      values = [false, false, false, false];
+                      values[3] = true;
+                    });
+                  },
                   activeColor: Colors.redAccent,
                 ),
                 Text(
