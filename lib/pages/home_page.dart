@@ -19,6 +19,8 @@ class HomePage extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.9,
               color: Colors.black12,
             ),
+
+            // LIST OF PLACEHOLDER ELEMENTS
             ImagePost(),
             PollPost(),
             TextPost(),

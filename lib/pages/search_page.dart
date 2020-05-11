@@ -16,8 +16,12 @@ class SearchPage extends StatelessWidget {
                 hintText: "search",
                 textStyle: TextStyle(color: Colors.black87, fontSize: 20),
                 loader: Text("loading..."),
-                onSearch: (String text) {},
-                onItemFound: (item, int index) {},
+                onSearch: (String text) {
+                  //TODO
+                },
+                onItemFound: (item, int index) {
+                  //TODO
+                },
               ),
             ),
             height: MediaQuery.of(context).size.height - 58,

@@ -14,9 +14,14 @@ class _StorePageState extends State<StorePage> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
+        //* PROGRESS INDICATOR
+
         Center(
           child: CircularProgressIndicator(),
         ),
+
+        //* WEB VIEW
+
         WebView(
           initialUrl: "https://www.higherprimate.com/",
           javascriptMode: JavascriptMode.unrestricted,

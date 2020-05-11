@@ -11,7 +11,7 @@ class PollPost extends StatefulWidget {
 class _PollPostState extends State<PollPost> {
   void _onOptionSelected(bool newValue) => setState(() {
         if (newValue) {
-          //
+          // PLACEHOLDER FUNCTION MENT JUST TO SHOW ACTIVE COLOR
         }
       });
 
@@ -22,10 +22,14 @@ class _PollPostState extends State<PollPost> {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: <Widget>[
+            //* TITLE
+
             Text(
               "fugit voluptatem quos",
               style: titleTextStyle,
             ),
+
+            //* SEPARATOR
             SizedBox(
               height: 10,
             ),
@@ -37,6 +41,9 @@ class _PollPostState extends State<PollPost> {
             SizedBox(
               height: 10,
             ),
+
+            //* OPTION [0]
+
             Row(
               children: <Widget>[
                 Checkbox(
@@ -50,6 +57,9 @@ class _PollPostState extends State<PollPost> {
                 ),
               ],
             ),
+
+            //* OPTION [1]
+
             Row(
               children: <Widget>[
                 Checkbox(
@@ -63,6 +73,9 @@ class _PollPostState extends State<PollPost> {
                 ),
               ],
             ),
+
+            //* OPTION [2]
+
             Row(
               children: <Widget>[
                 Checkbox(
@@ -76,6 +89,9 @@ class _PollPostState extends State<PollPost> {
                 ),
               ],
             ),
+
+            //* OPTION [3]
+
             Row(
               children: <Widget>[
                 Checkbox(
@@ -95,3 +111,17 @@ class _PollPostState extends State<PollPost> {
     );
   }
 }
+
+//!   POSIBLE IMPLEMENTATION OF OPTION LIST
+//        ListView(
+//         children: values.keys.map((String key) {
+//           return new CheckboxListTile(
+//             title: Text(key),
+//             value: values[key],
+//             onChanged: (bool value) {
+//               setState(() {
+//                 values[key] = value;
+//               });
+//             },
+//           );
+//         }).toList(),

@@ -10,8 +10,13 @@ class ImagePost extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: Column(
         children: <Widget>[
+          //* IMAGE
+
           Image.network(
               'https://bbgeneralcorp.com/wp-content/uploads/2017/09/placeholder.png'),
+
+          //* FOOTER
+
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(

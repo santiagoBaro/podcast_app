@@ -11,10 +11,15 @@ class TextPost extends StatelessWidget {
         padding: const EdgeInsets.all(15.0),
         child: Column(
           children: <Widget>[
+            //* TITLE
+
             Text(
               "dolorem voluptas vero",
               style: titleTextStyle,
             ),
+
+            //* SEPARATOR
+
             SizedBox(
               height: 10,
             ),
@@ -26,6 +31,9 @@ class TextPost extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
+
+            //* PARAGRAPH
+
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8.0),

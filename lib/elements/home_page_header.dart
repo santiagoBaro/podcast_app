@@ -10,9 +10,14 @@ class HomePageHeader extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: <Widget>[
+            //* START SEPARATOR
+            // TO MAKE THE FIRST ELEMENT CENTERED
+
             SizedBox(
               width: 20,
             ),
+
+            //* TILE [0]
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
@@ -31,6 +36,8 @@ class HomePageHeader extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
+
+            //* TILE [1]
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
@@ -49,6 +56,8 @@ class HomePageHeader extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
+
+            //* TILE [2]
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
@@ -67,6 +76,8 @@ class HomePageHeader extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
+
+            //* TILE [3]
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
@@ -85,6 +96,8 @@ class HomePageHeader extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
+
+            //* TILE [4]
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
@@ -103,6 +116,9 @@ class HomePageHeader extends StatelessWidget {
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
+
+            //* END SEPARATOR
+            // TO MAKE THE LAST ELEMENT CENTERED
             SizedBox(
               width: 20,
             ),
