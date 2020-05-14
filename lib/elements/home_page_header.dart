@@ -14,13 +14,21 @@ class HomePageHeader extends StatelessWidget {
             // TO MAKE THE FIRST ELEMENT CENTERED
 
             SizedBox(
-              width: 20,
+              width: 25,
             ),
 
             //* TILE [0]
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image(
+                    image: NetworkImage(
+                        'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1473.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 decoration: new BoxDecoration(
                     color: Colors.black12,
                     borderRadius: new BorderRadius.all(Radius.circular(10.0)),
@@ -32,7 +40,7 @@ class HomePageHeader extends StatelessWidget {
                         spreadRadius: 2.0,
                       ),
                     ]),
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.width * 0.8 * 9 / 14,
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
@@ -41,6 +49,14 @@ class HomePageHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image(
+                    image: NetworkImage(
+                        'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1472.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 decoration: new BoxDecoration(
                     color: Colors.black12,
                     borderRadius: new BorderRadius.all(Radius.circular(10.0)),
@@ -52,7 +68,7 @@ class HomePageHeader extends StatelessWidget {
                         spreadRadius: 2.0,
                       ),
                     ]),
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.width * 0.8 * 9 / 14,
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
@@ -61,6 +77,14 @@ class HomePageHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image(
+                    image: NetworkImage(
+                        'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1471A.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 decoration: new BoxDecoration(
                     color: Colors.black12,
                     borderRadius: new BorderRadius.all(Radius.circular(10.0)),
@@ -72,7 +96,7 @@ class HomePageHeader extends StatelessWidget {
                         spreadRadius: 2.0,
                       ),
                     ]),
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.width * 0.8 * 9 / 14,
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
@@ -81,6 +105,17 @@ class HomePageHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10.0),
+                    child: Image(
+                      image: NetworkImage(
+                          'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1471.jpg'),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
                 decoration: new BoxDecoration(
                     color: Colors.black12,
                     borderRadius: new BorderRadius.all(Radius.circular(10.0)),
@@ -92,7 +127,7 @@ class HomePageHeader extends StatelessWidget {
                         spreadRadius: 2.0,
                       ),
                     ]),
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.width * 0.8 * 9 / 14,
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
@@ -101,6 +136,14 @@ class HomePageHeader extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image(
+                    image: NetworkImage(
+                        'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE14701.jpg'),
+                    fit: BoxFit.fill,
+                  ),
+                ),
                 decoration: new BoxDecoration(
                     color: Colors.black12,
                     borderRadius: new BorderRadius.all(Radius.circular(10.0)),
@@ -112,7 +155,7 @@ class HomePageHeader extends StatelessWidget {
                         spreadRadius: 2.0,
                       ),
                     ]),
-                height: MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.width * 0.8 * 9 / 14,
                 width: MediaQuery.of(context).size.width * 0.8,
               ),
             ),
@@ -120,7 +163,7 @@ class HomePageHeader extends StatelessWidget {
             //* END SEPARATOR
             // TO MAKE THE LAST ELEMENT CENTERED
             SizedBox(
-              width: 20,
+              width: 25,
             ),
           ],
         ),

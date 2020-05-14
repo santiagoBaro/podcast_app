@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jreapp/pages/home_page.dart';
 import 'package:jreapp/pages/search_page.dart';
 import 'package:jreapp/pages/store_page.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
+        title: _title,
+        home: MyStatefulWidget(),
+        debugShowCheckedModeBanner: false);
   }
 }
 
