@@ -12,8 +12,10 @@ class ImagePost extends StatelessWidget {
         children: <Widget>[
           //* IMAGE
 
-          Image.network(
-              'https://bbgeneralcorp.com/wp-content/uploads/2017/09/placeholder.png'),
+          Image(
+            image: NetworkImage(
+                'https://bbgeneralcorp.com/wp-content/uploads/2017/09/placeholder.png'),
+          ),
 
           //* FOOTER
 

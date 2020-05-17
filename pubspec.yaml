@@ -31,6 +31,7 @@ dependencies:
   flappy_search_bar: 1.4.1
   webview_flutter: ^0.3.21
   getflutter: ^1.0.11
+  url_audio_stream: 1.0.0+3
 
 dev_dependencies:
   flutter_test:

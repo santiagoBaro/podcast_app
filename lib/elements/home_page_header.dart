@@ -3,6 +3,34 @@ import 'package:flutter/material.dart';
 class HomePageHeader extends StatelessWidget {
   const HomePageHeader({Key key}) : super(key: key);
 
+  void _showDialog(BuildContext context) {
+    // flutter defined function
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        // return object of type Dialog
+        return AlertDialog(
+          title: new Text("#1473 - Tom Papa"),
+          content: new Text(
+              "Voluptatem perspiciatis enim possimus molestiae quod odio. Molestiae voluptatibus doloremque et quo eum sunt consequatur necessitatibus enim. Asperiores nobis saepe nemo enim assumenda perferendis. Tempora facilis sequi velit eaque nostrum animi quae. Enim ut saepe dolor est quam provident ut corporis. Non animi suscipit aut cupiditate quia minus asperiores excepturi et."),
+          actions: <Widget>[
+            // usually buttons at the bottom of the dialog
+            new FlatButton(
+              child: new Text("Cancel"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            new FlatButton(
+              child: new Text("Play"),
+              onPressed: () {},
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,19 +42,24 @@ class HomePageHeader extends StatelessWidget {
             // TO MAKE THE FIRST ELEMENT CENTERED
 
             SizedBox(
-              width: 25,
+              width: MediaQuery.of(context).size.width * 0.1 - 7,
             ),
 
             //* TILE [0]
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
-                  child: Image(
-                    image: NetworkImage(
-                        'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1473.jpg'),
-                    fit: BoxFit.fill,
+                  child: InkWell(
+                    child: Image(
+                      image: NetworkImage(
+                          'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1473.jpg'),
+                      fit: BoxFit.fill,
+                    ),
+                    onTap: () {
+                      _showDialog(context);
+                    },
                   ),
                 ),
                 decoration: new BoxDecoration(
@@ -47,14 +80,52 @@ class HomePageHeader extends StatelessWidget {
 
             //* TILE [1]
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
-                  child: Image(
-                    image: NetworkImage(
-                        'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1472.jpg'),
-                    fit: BoxFit.fill,
+                  child: Stack(
+                    children: <Widget>[
+                      Image(
+                        image: NetworkImage(
+                          'http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1472.jpg',
+                        ),
+                        fit: BoxFit.fill,
+                      ),
+                      Container(
+                        color: Colors.black38,
+                      ),
+                      Center(
+                        child: Row(
+                          children: <Widget>[
+                            IconButton(
+                              iconSize: 60,
+                              color: Colors.white,
+                              icon: Icon(Icons.replay_10),
+                              tooltip: 'Increase volume by 10',
+                              onPressed: () {},
+                            ),
+                            IconButton(
+                              iconSize: 90,
+                              color: Colors.white,
+                              icon: Icon(Icons.pause_circle_outline),
+                              tooltip: 'Increase volume by 10',
+                              onPressed: () {},
+                            ),
+                            IconButton(
+                              iconSize: 60,
+                              color: Colors.white,
+                              icon: Icon(Icons.forward_10),
+                              tooltip: 'Increase volume by 10',
+                              onPressed: () {},
+                            ),
+                          ],
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.max,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 decoration: new BoxDecoration(
@@ -75,7 +146,7 @@ class HomePageHeader extends StatelessWidget {
 
             //* TILE [2]
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
@@ -103,7 +174,7 @@ class HomePageHeader extends StatelessWidget {
 
             //* TILE [3]
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
@@ -134,7 +205,7 @@ class HomePageHeader extends StatelessWidget {
 
             //* TILE [4]
             Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(10.0),
               child: Container(
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
@@ -163,7 +234,7 @@ class HomePageHeader extends StatelessWidget {
             //* END SEPARATOR
             // TO MAKE THE LAST ELEMENT CENTERED
             SizedBox(
-              width: 25,
+              width: MediaQuery.of(context).size.width * 0.1 - 7,
             ),
           ],
         ),
