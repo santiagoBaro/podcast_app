@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jreapp/data/episode.dart';
+import 'package:url_audio_stream/url_audio_stream.dart';
 
 class HeaderTile extends StatefulWidget {
   final Episode episode;
@@ -10,6 +11,24 @@ class HeaderTile extends StatefulWidget {
 }
 
 class _HeaderTileState extends State<HeaderTile> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  static AudioStream stream; //= new AudioStream(episode.audioURL);
+  Future<void> callAudio(String action) async {
+    if (action == "start") {
+      stream.start();
+    } else if (action == "stop") {
+      stream.stop();
+    } else if (action == "pause") {
+      stream.pause();
+    } else {
+      stream.resume();
+    }
+  }
+
   void _showDialog(BuildContext context) {
     // flutter defined function
     showDialog(
@@ -18,13 +37,12 @@ class _HeaderTileState extends State<HeaderTile> {
         // return object of type Dialog
         return AlertDialog(
           //*  TITLE
-          title: //new Text(widget.episode.Number.toString()),
-              new Text(
-                  "#${widget.episode.Number} - ${widget.episode.GuestList}"),
+          title: new Text(
+              "#${widget.episode.number} - ${widget.episode.guestList}"),
 
           //* DESCRIPTION
           content: new Text(
-            widget.episode.Description,
+            widget.episode.description,
             style: TextStyle(
               color: Colors.black54,
             ),
@@ -51,7 +69,14 @@ class _HeaderTileState extends State<HeaderTile> {
             new FlatButton(
               color: Colors.redAccent,
               child: new Text("Play"),
-              onPressed: () {},
+              onPressed: () {
+                _controlsVisible = true;
+                setState(() {
+                  stream = new AudioStream(widget.episode.audioURL);
+                  stream.start();
+                });
+                Navigator.of(context).pop();
+              },
             ),
           ],
         );
@@ -75,7 +100,7 @@ class _HeaderTileState extends State<HeaderTile> {
                 borderRadius: BorderRadius.circular(10.0),
                 child: InkWell(
                   child: Image(
-                    image: NetworkImage(widget.episode.ImageURL),
+                    image: NetworkImage(widget.episode.imageURL),
                     fit: BoxFit.fill,
                   ),
                   onTap: () {
@@ -125,7 +150,10 @@ class _HeaderTileState extends State<HeaderTile> {
                       color: Colors.white,
                       icon: Icon(Icons.pause_circle_outline),
                       tooltip: 'Increase volume by 10',
-                      onPressed: () {},
+                      onPressed: () {
+                        stream.pause();
+                        // callAudio("pause");
+                      },
                     ),
                     IconButton(
                       iconSize: 60,

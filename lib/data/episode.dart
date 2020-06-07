@@ -1,18 +1,18 @@
 class Episode {
-  final int Number;
-  final DateTime Date;
-  final String GuestList;
-  final String Description;
-  final String AudioURL;
-  final String ImageURL;
+  final int number;
+  final DateTime date;
+  final String guestList;
+  final String description;
+  final String audioURL;
+  final String imageURL;
 
   Episode(
-    this.Number,
-    this.GuestList,
-    this.Description,
-    this.AudioURL,
-    this.ImageURL,
-    this.Date,
+    this.number,
+    this.guestList,
+    this.description,
+    this.audioURL,
+    this.imageURL,
+    this.date,
   );
 }
 
@@ -78,7 +78,7 @@ List<Episode> testData = [
     "Alonzo Bodden",
     "Alonzo Bodden is a stand up comedian and also the winner of Last Comic Standing Season 3. Check out his podcast called “Who’s Paying Attention” available via Apple Podcasts and Stitcher.",
     "http://traffic.libsyn.com/joeroganexp/p1468.mp3",
-    "http://podcasts.joerogan.net/wp-content/uploads/2020/05/JRE1468.jpg",
-    DateTime.utc(2020, 05, 7),
+    "http://podcasts.joerogan.net/wp-content/uploads/2020/04/JRE1468.jpg",
+    DateTime.utc(2020, 05, 1),
   ),
 ];
