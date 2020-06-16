@@ -1,4 +1,4 @@
-# jreapp
+# Podcast App
 
 A new Flutter application.
 
